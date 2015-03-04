@@ -359,115 +359,115 @@ def showwarning(screen):
     screen.fill((0,0,0))
     screen.blit(text,(175,240))
     
-def load_images(card_dict):
-    try:
-        img = pygame.image.load("playing_cards/ace_clubs.png").convert()
-        card_dict["ace_clubs"] = img
-        img = pygame.image.load("playing_cards/2_clubs.png").convert()
-        card_dict["2_clubs"] = img
-        img = pygame.image.load("playing_cards/3_clubs.png").convert()
-        card_dict["3_clubs"] = img
-        img = pygame.image.load("playing_cards/4_clubs.png").convert()
-        card_dict["4_clubs"] = img
-        img = pygame.image.load("playing_cards/5_clubs.png").convert()
-        card_dict["5_clubs"] = img
-        img = pygame.image.load("playing_cards/6_clubs.png").convert()
-        card_dict["6_clubs"] = img
-        img = pygame.image.load("playing_cards/7_clubs.png").convert()
-        card_dict["7_clubs"] = img
-        img = pygame.image.load("playing_cards/8_clubs.png").convert()
-        card_dict["8_clubs"] = img
-        img = pygame.image.load("playing_cards/9_clubs.png").convert()
-        card_dict["9_clubs"] = img
-        img = pygame.image.load("playing_cards/10_clubs.png").convert()
-        card_dict["10_clubs"] = img
-        img = pygame.image.load("playing_cards/jack_clubs.png").convert()
-        card_dict["jack_clubs"] = img
-        img = pygame.image.load("playing_cards/queen_clubs.png").convert()
-        card_dict["queen_clubs"] = img
-        img = pygame.image.load("playing_cards/king_clubs.png").convert()
-        card_dict["king_clubs"] = img
-        img = pygame.image.load("playing_cards/ace_spades.png").convert()
-        card_dict["ace_spades"] = img
-        img = pygame.image.load("playing_cards/2_spades.png").convert()
-        card_dict["2_spades"] = img
-        img = pygame.image.load("playing_cards/3_spades.png").convert()
-        card_dict["3_spades"] = img
-        img = pygame.image.load("playing_cards/4_spades.png").convert()
-        card_dict["4_spades"] = img
-        img = pygame.image.load("playing_cards/5_spades.png").convert()
-        card_dict["5_spades"] = img
-        img = pygame.image.load("playing_cards/6_spades.png").convert()
-        card_dict["6_spades"] = img
-        img = pygame.image.load("playing_cards/7_spades.png").convert()
-        card_dict["7_spades"] = img
-        img = pygame.image.load("playing_cards/8_spades.png").convert()
-        card_dict["8_spades"] = img
-        img = pygame.image.load("playing_cards/9_spades.png").convert()
-        card_dict["9_spades"] = img
-        img = pygame.image.load("playing_cards/10_spades.png").convert()
-        card_dict["10_spades"] = img
-        img = pygame.image.load("playing_cards/jack_spades.png").convert()
-        card_dict["jack_spades"] = img
-        img = pygame.image.load("playing_cards/queen_spades.png").convert()
-        card_dict["queen_spades"] = img
-        img = pygame.image.load("playing_cards/king_spades.png").convert()
-        card_dict["king_spades"] = img
-        img = pygame.image.load("playing_cards/ace_hearts.png").convert()
-        card_dict["ace_hearts"] = img
-        img = pygame.image.load("playing_cards/2_hearts.png").convert()
-        card_dict["2_hearts"] = img
-        img = pygame.image.load("playing_cards/3_hearts.png").convert()
-        card_dict["3_hearts"] = img
-        img = pygame.image.load("playing_cards/4_hearts.png").convert()
-        card_dict["4_hearts"] = img
-        img = pygame.image.load("playing_cards/5_hearts.png").convert()
-        card_dict["5_hearts"] = img
-        img = pygame.image.load("playing_cards/6_hearts.png").convert()
-        card_dict["6_hearts"] = img
-        img = pygame.image.load("playing_cards/7_hearts.png").convert()
-        card_dict["7_hearts"] = img
-        img = pygame.image.load("playing_cards/8_hearts.png").convert()
-        card_dict["8_hearts"] = img
-        img = pygame.image.load("playing_cards/9_hearts.png").convert()
-        card_dict["9_hearts"] = img
-        img = pygame.image.load("playing_cards/10_hearts.png").convert()
-        card_dict["10_hearts"] = img
-        img = pygame.image.load("playing_cards/jack_hearts.png").convert()
-        card_dict["jack_hearts"] = img
-        img = pygame.image.load("playing_cards/queen_hearts.png").convert()
-        card_dict["queen_hearts"] = img
-        img = pygame.image.load("playing_cards/king_hearts.png").convert()
-        card_dict["king_hearts"] = img
-        img = pygame.image.load("playing_cards/ace_diamonds.png").convert()
-        card_dict["ace_diamonds"] = img
-        img = pygame.image.load("playing_cards/2_diamonds.png").convert()
-        card_dict["2_diamonds"] = img
-        img = pygame.image.load("playing_cards/3_diamonds.png").convert()
-        card_dict["3_diamonds"] = img
-        img = pygame.image.load("playing_cards/4_diamonds.png").convert()
-        card_dict["4_diamonds"] = img
-        img = pygame.image.load("playing_cards/5_diamonds.png").convert()
-        card_dict["5_diamonds"] = img
-        img = pygame.image.load("playing_cards/6_diamonds.png").convert()
-        card_dict["6_diamonds"] = img
-        img = pygame.image.load("playing_cards/7_diamonds.png").convert()
-        card_dict["7_diamonds"] = img
-        img = pygame.image.load("playing_cards/8_diamonds.png").convert()
-        card_dict["8_diamonds"] = img
-        img = pygame.image.load("playing_cards/9_diamonds.png").convert()
-        card_dict["9_diamonds"] = img
-        img = pygame.image.load("playing_cards/10_diamonds.png").convert()
-        card_dict["10_diamonds"] = img
-        img = pygame.image.load("playing_cards/jack_diamonds.png").convert()
-        card_dict["jack_diamonds"] = img
-        img = pygame.image.load("playing_cards/queen_diamonds.png").convert()
-        card_dict["queen_diamonds"] = img
-        img = pygame.image.load("playing_cards/king_diamonds.png").convert()
-        card_dict["king_diamonds"] = img
-        return True
-    except pygame.error:
-        return False
+def load_images():
+    """Return a dictionary with all the images..."""
+    D = {}
+    img = pygame.image.load("playing_cards/ace_clubs.png").convert()
+    D["ace_clubs"] = img
+    img = pygame.image.load("playing_cards/2_clubs.png").convert()
+    D["2_clubs"] = img
+    img = pygame.image.load("playing_cards/3_clubs.png").convert()
+    D["3_clubs"] = img
+    img = pygame.image.load("playing_cards/4_clubs.png").convert()
+    D["4_clubs"] = img
+    img = pygame.image.load("playing_cards/5_clubs.png").convert()
+    D["5_clubs"] = img
+    img = pygame.image.load("playing_cards/6_clubs.png").convert()
+    D["6_clubs"] = img
+    img = pygame.image.load("playing_cards/7_clubs.png").convert()
+    D["7_clubs"] = img
+    img = pygame.image.load("playing_cards/8_clubs.png").convert()
+    D["8_clubs"] = img
+    img = pygame.image.load("playing_cards/9_clubs.png").convert()
+    D["9_clubs"] = img
+    img = pygame.image.load("playing_cards/10_clubs.png").convert()
+    D["10_clubs"] = img
+    img = pygame.image.load("playing_cards/jack_clubs.png").convert()
+    D["jack_clubs"] = img
+    img = pygame.image.load("playing_cards/queen_clubs.png").convert()
+    D["queen_clubs"] = img
+    img = pygame.image.load("playing_cards/king_clubs.png").convert()
+    D["king_clubs"] = img
+    img = pygame.image.load("playing_cards/ace_spades.png").convert()
+    D["ace_spades"] = img
+    img = pygame.image.load("playing_cards/2_spades.png").convert()
+    D["2_spades"] = img
+    img = pygame.image.load("playing_cards/3_spades.png").convert()
+    D["3_spades"] = img
+    img = pygame.image.load("playing_cards/4_spades.png").convert()
+    D["4_spades"] = img
+    img = pygame.image.load("playing_cards/5_spades.png").convert()
+    D["5_spades"] = img
+    img = pygame.image.load("playing_cards/6_spades.png").convert()
+    D["6_spades"] = img
+    img = pygame.image.load("playing_cards/7_spades.png").convert()
+    D["7_spades"] = img
+    img = pygame.image.load("playing_cards/8_spades.png").convert()
+    D["8_spades"] = img
+    img = pygame.image.load("playing_cards/9_spades.png").convert()
+    D["9_spades"] = img
+    img = pygame.image.load("playing_cards/10_spades.png").convert()
+    D["10_spades"] = img
+    img = pygame.image.load("playing_cards/jack_spades.png").convert()
+    D["jack_spades"] = img
+    img = pygame.image.load("playing_cards/queen_spades.png").convert()
+    D["queen_spades"] = img
+    img = pygame.image.load("playing_cards/king_spades.png").convert()
+    D["king_spades"] = img
+    img = pygame.image.load("playing_cards/ace_hearts.png").convert()
+    D["ace_hearts"] = img
+    img = pygame.image.load("playing_cards/2_hearts.png").convert()
+    D["2_hearts"] = img
+    img = pygame.image.load("playing_cards/3_hearts.png").convert()
+    D["3_hearts"] = img
+    img = pygame.image.load("playing_cards/4_hearts.png").convert()
+    D["4_hearts"] = img
+    img = pygame.image.load("playing_cards/5_hearts.png").convert()
+    D["5_hearts"] = img
+    img = pygame.image.load("playing_cards/6_hearts.png").convert()
+    D["6_hearts"] = img
+    img = pygame.image.load("playing_cards/7_hearts.png").convert()
+    D["7_hearts"] = img
+    img = pygame.image.load("playing_cards/8_hearts.png").convert()
+    D["8_hearts"] = img
+    img = pygame.image.load("playing_cards/9_hearts.png").convert()
+    D["9_hearts"] = img
+    img = pygame.image.load("playing_cards/10_hearts.png").convert()
+    D["10_hearts"] = img
+    img = pygame.image.load("playing_cards/jack_hearts.png").convert()
+    D["jack_hearts"] = img
+    img = pygame.image.load("playing_cards/queen_hearts.png").convert()
+    D["queen_hearts"] = img
+    img = pygame.image.load("playing_cards/king_hearts.png").convert()
+    D["king_hearts"] = img
+    img = pygame.image.load("playing_cards/ace_diamonds.png").convert()
+    D["ace_diamonds"] = img
+    img = pygame.image.load("playing_cards/2_diamonds.png").convert()
+    D["2_diamonds"] = img
+    img = pygame.image.load("playing_cards/3_diamonds.png").convert()
+    D["3_diamonds"] = img
+    img = pygame.image.load("playing_cards/4_diamonds.png").convert()
+    D["4_diamonds"] = img
+    img = pygame.image.load("playing_cards/5_diamonds.png").convert()
+    D["5_diamonds"] = img
+    img = pygame.image.load("playing_cards/6_diamonds.png").convert()
+    D["6_diamonds"] = img
+    img = pygame.image.load("playing_cards/7_diamonds.png").convert()
+    D["7_diamonds"] = img
+    img = pygame.image.load("playing_cards/8_diamonds.png").convert()
+    D["8_diamonds"] = img
+    img = pygame.image.load("playing_cards/9_diamonds.png").convert()
+    D["9_diamonds"] = img
+    img = pygame.image.load("playing_cards/10_diamonds.png").convert()
+    D["10_diamonds"] = img
+    img = pygame.image.load("playing_cards/jack_diamonds.png").convert()
+    D["jack_diamonds"] = img
+    img = pygame.image.load("playing_cards/queen_diamonds.png").convert()
+    D["queen_diamonds"] = img
+    img = pygame.image.load("playing_cards/king_diamonds.png").convert()
+    D["king_diamonds"] = img
+    
+    return D
 
 def main():
     pygame.init()
@@ -484,8 +484,9 @@ def main():
     # Used to manage how fast the screen updates
     clock = pygame.time.Clock()
     #-------------------------------------------
-    card_dict = {} #This variable will hold all the images of the cards
-    if not load_images(card_dict):
+    try:
+        card_dict = load_images() #This variable will hold all the images of the cards
+    except pygame.error:
         done = True
     #This variable below will hold all the names of the cards.
     card_list = shuffle_cards()
